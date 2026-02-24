@@ -1,0 +1,92 @@
+
+
+import java.util.Scanner;
+
+
+public class Jav {
+   public static void main(String[] args) {
+       Scanner scanner = new Scanner(System.in);
+
+
+       System.out.print("Enter number A: ");
+       int A = scanner.nextInt();
+
+
+       System.out.print("Enter number B: ");
+       int B = scanner.nextInt();
+
+
+       System.out.print("Enter number C: ");
+       int C = scanner.nextInt();
+
+
+       System.out.print("Enter number D: ");
+       int D = scanner.nextInt();
+
+
+       System.out.print("Enter number E: ");
+       int E = scanner.nextInt();
+
+
+       int[] numbers = {A, B, C, D, E};
+
+
+       int even = 0;
+       int odd = 0;
+       int sum = 0;
+
+
+       for (int num : numbers) {
+           if (num % 2 == 0)
+               even++;
+           else
+               odd++;
+           sum += num;
+       }
+
+
+       double average = sum / 5.0;
+
+
+       System.out.println("\nEven: " + even + ", Odd: " + odd);
+
+
+
+
+       System.out.println("Sum = " + sum + ", Average = " + average);
+
+
+
+
+       System.out.print("Numbers greater than average: ");
+
+
+       boolean found = false;
+       for (int num : numbers) {
+           if (num > average) {
+               System.out.print(num + " ");
+               found = true;
+           }
+       }
+
+
+       if (!found) {
+           System.out.print("None");
+       }
+
+
+       System.out.println();
+       scanner.close();
+   }
+
+
+
+
+
+
+}
+
+
+
+
+

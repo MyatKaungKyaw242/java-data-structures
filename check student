@@ -1,0 +1,68 @@
+public class student {
+
+
+   private String name;
+   private int age;
+   private double gpa;
+
+
+   public student() {
+       this.name = "Unknown";
+       this.age = 0;
+       this.gpa = 0.0;
+   }
+   public student(String name, int age) {
+       this.name = name;
+       this.age = age;
+       this.gpa = 0.0;
+   }
+   public student(String name, int age, double gpa) {
+       this.name = name;
+       this.age = age;
+       this.gpa = gpa;
+   }
+   public void setName(String name) {
+       this.name = name;
+   }
+   public void setAge(int age) {
+       this.age = age;
+   }
+   public void setGpa(double gpa) {
+       this.gpa = gpa;
+   }
+   public void showInfo() {
+       System.out.println("Name: " + name);
+       System.out.println("Age: " + age);
+       System.out.println("GPA: " + gpa);
+   }
+}
+public class main {
+   public static void main(String[] args) {
+
+
+       student s1 = new student();
+
+
+       System.out.println("TASK:1");
+       s1.setName("Alice");
+       s1.setAge(20);
+       s1.setGpa(3.50);
+       s1.showInfo();
+       System.out.println("------------");
+
+
+       System.out.println("TASK:2");
+       student s2 = new student("Bob", 19);
+       s2.setGpa(3.00);
+       s2.showInfo();
+       System.out.println("------------");
+
+
+       System.out.println("TASK:3");
+       student s3 = new student("Charlie", 21, 3.75);
+       s3.showInfo();
+   }
+}
+
+
+

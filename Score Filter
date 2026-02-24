@@ -1,0 +1,67 @@
+
+
+import java.util.Scanner;
+
+
+public class java {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String name1,name2,name3;
+        int score1, score2, score3;
+
+        System.out.print("Enter the name of Student1: ");
+        name1 =scanner.nextLine();
+        System.out.print("Enter score of " + name1 + ": ");
+        score1 = scanner.nextInt();
+        scanner.nextLine();
+
+
+        System.out.print("Enter the name of Student2: ");
+        name2 =scanner.nextLine();
+        System.out.print("Enter score of " + name2 + ": ");
+        score2 = scanner.nextInt();
+        scanner.nextLine();
+
+
+        System.out.print("Enter the name of Student2: ");
+        name3 =scanner.nextLine();
+        System.out.print("Enter score of " + name3 + ": ");
+        score3 = scanner.nextInt();
+        scanner.nextLine();
+
+
+        double avg = (score1+score2+score3) / 3.0;
+        int highest = score1;
+        if(score2 > highest){
+            highest = score2;
+        }
+
+
+        if (score3 > highest){
+            highest = score3;
+        }
+
+
+        int lowest = score1;
+        if (score2 < lowest){
+            lowest=score2;
+        }
+        if(score3 < lowest){
+            lowest=score3;
+        }
+
+
+        System.out.println("Average Score = "+avg);
+        System.out.println("Highest Score = "+highest);
+        System.out.println("Lowest Score = "+lowest);
+
+
+
+
+
+
+    }
+}
+
+
+

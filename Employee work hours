@@ -1,0 +1,86 @@
+abstract class Employee{
+   protected String name;
+   protected int age;
+
+
+   void showInfo(){
+       System.out.println("Name " + name);
+       System.out.println("Age " + age);
+       System.out.println("Wage " +calculateWage());
+   }
+   abstract double calculateWage();
+}
+
+
+class Fulltime extends Employee{
+   protected double hourlyRate;
+   protected int hours = 160;
+
+
+   @Override
+   double calculateWage() {
+       return hourlyRate * hours;
+   }
+}
+class Parttime extends Employee {
+   protected double hourlyRate;
+   protected int hoursWorked;
+   @Override
+   double calculateWage(){
+       return hourlyRate * hoursWorked;
+   }
+}
+class Intern extends Employee{
+   protected double hourlyRate;
+   protected int hoursWorked;
+
+
+   @Override
+   double calculateWage(){
+       return hourlyRate * hoursWorked;
+   }
+}
+public class Main {
+   public static void main(String[] args) {
+
+
+
+
+       Fulltime alice = new Fulltime();
+       alice.name = "Alice";
+       alice.age = 30;
+       alice.hourlyRate = 200;
+       alice.showInfo();
+
+
+       System.out.println("--------");
+
+
+
+
+       Parttime bob = new Parttime();
+       bob.name = "Bob";
+       bob.age = 22;
+       bob.hourlyRate = 200;
+       bob.hoursWorked = 60;
+       bob.showInfo();
+
+
+       System.out.println("--------");
+
+
+
+
+       Intern charlie = new Intern();
+       charlie.name = "Charlie";
+       charlie.age = 20;
+       charlie.hourlyRate = 100;
+       charlie.hoursWorked = 60;
+       charlie.showInfo();
+
+
+
+
+   }
+}
+
